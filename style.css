@@ -1,0 +1,145 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap');
+:root {
+    --main: #1290a4;
+    --input-background: rgba(18, 144, 164, 0.07);
+    --white: #ffffff;
+    --title: #1f1f1f ;
+    --description: #222f3f;
+    -gray: #878b90;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Karla', sans-serif;
+    background-color: #f8f8f8;
+}
+
+.shadow {
+    -webkit-box-shadow: 0px 22px 44px -12px rgba(18,144,164,0.35);
+    -moz-box-shadow: 0px 22px 44px -12px rgba(18,144,164,0.35);
+    box-shadow: 0px 22px 44px -12px rgba(18,144,164,0.35);
+}
+
+.container {
+    width: 1125px;
+    max-width: 80%;
+    margin: auto;
+}
+
+nav,
+nav ul  {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+nav {
+    margin-top: 20px;
+}
+
+nav ul {
+    list-style: none;
+}
+
+nav ul li a,
+nav .signin a {
+    margin: 0 10px;
+    text-decoration: none;
+    color: var(--title);
+    
+    transition: color .2s;
+}
+
+nav ul li a:hover {
+    color: var(--main);
+}
+
+.signin {
+    display: flex;
+    align-items: center;
+}
+
+.signin a.btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-color: var(--main);
+    color: var(--white);
+
+    height: 40px;
+    width: 137px;
+
+    border-radius: 4px;
+
+}
+
+.hero {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    height: calc(90vh - 55px)
+}
+
+.main-content h1 {
+    font-size: 50px;
+    font-weight: bold;
+    color: var(--title);
+}
+
+.main-content h1,
+.main-content p,
+.main-content .email {
+    margin-bottom: 25px;
+}
+
+.main-content p {
+    font-size: 21px;
+    line-height: 2rem;
+    color: var(--description);
+}
+
+.email {
+    display: grid;
+    grid-template-columns: 60% 30%;
+    gap: 10px;
+    border: none;
+}
+
+.email input {
+    padding: 12px;
+    height: 60px;
+    outline: none;
+    font-size: 16px;
+    background-color: var(--input-background);
+    border: none;
+}
+
+.email button {
+    background-color: var(--main);
+    color: var(--white);
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 4px;
+    border: none;
+}
+
+.email button:hover {
+    cursor: pointer;
+}
+
+.main-content .signin p {
+    font-size: 16px;
+    color: var(--gray);
+}
+
+.hero .main-img {
+    margin-top: 100px;
+    max-width: 100%;
+}
+
