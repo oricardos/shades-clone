@@ -5,8 +5,9 @@
     --white: #ffffff;
     --title: #1f1f1f ;
     --description: #222f3f;
-    -gray: #878b90;
+    --gray: #878b90;
     --section-color: #EEF4F5;
+    --card-description: #666666;
 }
 * {
     margin: 0;
@@ -147,15 +148,46 @@ nav ul li a:hover {
 section.next-step {
     background-color: var(--section-color);
     padding: 60px 0;
-    text-align: center;
+    
 }
 
 section.next-step h2 {
     font-size: 48px;
     color: var(--title);
+    text-align: center;
+    margin-bottom: 60px;
 }
 
 section.next-step .cards {
-    display: flex;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 10px;
 }
 
+section.next-step .cards .card {
+    background-color: var(--white);
+    padding: 10px;
+    border-radius: 4px;
+}
+
+.card .card-icon img {
+    margin: 20px;
+    width: 30px;
+    height: 30px;
+}
+
+.card .card-title {
+    font-size: 25px;
+    color: var(--title);
+    margin-bottom: 20px;
+}
+
+.card .card-description {
+    font-size: 16px;
+    color: var(--card-description);
+    margin-bottom: 20px;
+}
+
+.card a.card-link {
+    margin-bottom: 20px;
+}
