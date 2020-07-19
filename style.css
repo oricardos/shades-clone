@@ -6,6 +6,7 @@
     --title: #1f1f1f ;
     --description: #222f3f;
     -gray: #878b90;
+    --section-color: #EEF4F5;
 }
 * {
     margin: 0;
@@ -141,5 +142,20 @@ nav ul li a:hover {
 .hero .main-img {
     margin-top: 100px;
     max-width: 100%;
+}
+
+section.next-step {
+    background-color: var(--section-color);
+    padding: 60px 0;
+    text-align: center;
+}
+
+section.next-step h2 {
+    font-size: 48px;
+    color: var(--title);
+}
+
+section.next-step .cards {
+    display: flex;
 }
 
