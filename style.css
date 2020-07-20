@@ -7,7 +7,7 @@
     --description: #222f3f;
     --gray: #878b90;
     --section-color: #EEF4F5;
-    --card-description: #666666;
+    --content-description: #666666;
 }
 * {
     margin: 0;
@@ -140,6 +140,12 @@ nav ul li a:hover {
     color: var(--gray);
 }
 
+.main-content .signin p>a {
+    color: var(--main);
+    text-decoration: none;
+    font-weight: bold;
+}
+
 .hero .main-img {
     margin-top: 100px;
     max-width: 100%;
@@ -166,14 +172,14 @@ section.next-step .cards {
 
 section.next-step .cards .card {
     background-color: var(--white);
-    padding: 10px;
+    padding: 25px;
     border-radius: 4px;
 }
-
-.card .card-icon img {
+.card .card-icon i {
     margin: 20px;
     width: 30px;
     height: 30px;
+    color: var(--main)
 }
 
 .card .card-title {
@@ -184,10 +190,42 @@ section.next-step .cards .card {
 
 .card .card-description {
     font-size: 16px;
-    color: var(--card-description);
+    color: var(--content-description);
     margin-bottom: 20px;
 }
 
 .card a.card-link {
     margin-bottom: 20px;
+    color: var(--main);
+    text-decoration: none;
 }
+
+
+/* RESPONSE CONTENT */
+
+.content-response {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    
+    padding: 120px 0 80px;
+}
+
+.response-content h2 {
+    font-size: 48px;
+    color: var(--title);
+}
+
+.response-content p.p-response {
+    margin: 40px 0;
+    font-size: 20px;
+    color: var(--content-description);
+}
+
+.response-content a.response-link {
+    color: var(--main);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+
