@@ -2,6 +2,8 @@
 :root {
     --main: #1290a4;
     --input-background: rgba(18, 144, 164, 0.07);
+    --icon-color: #F46F7C;
+    --icon-bg: #FEF0F2;
     --white: #ffffff;
     --title: #1f1f1f ;
     --description: #222f3f;
@@ -18,6 +20,13 @@
 body {
     font-family: 'Karla', sans-serif;
     background-color: #f8f8f8;
+}
+
+.shapes img {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    border-style: none;
 }
 
 .shadow {
@@ -153,7 +162,7 @@ nav ul li a:hover {
 
 section.next-step {
     background-color: var(--section-color);
-    padding: 60px 0;
+    padding: 120px 0;
     
 }
 
@@ -172,14 +181,25 @@ section.next-step .cards {
 
 section.next-step .cards .card {
     background-color: var(--white);
+    border: solid 1px #D8E4E6;
     padding: 25px;
     border-radius: 4px;
+
+    transition: .4s;
+}
+
+section.next-step .cards .card:hover {
+    -webkit-box-shadow: 0px 24px 48px -12px rgba(102,102,102,0.24);
+-moz-box-shadow: 0px 24px 48px -12px rgba(102,102,102,0.24);
+box-shadow: 0px 24px 48px -12px rgba(102,102,102,0.24);
 }
 .card .card-icon i {
-    margin: 20px;
-    width: 30px;
-    height: 30px;
-    color: var(--main)
+    margin-bottom: 40px;
+    font-size: 30px;
+    background-color: var(--icon-bg);
+    padding: 20px;
+    border-radius: 50%;
+    color: var(--icon-color)
 }
 
 .card .card-title {
@@ -195,6 +215,8 @@ section.next-step .cards .card {
 }
 
 .card a.card-link {
+    font-size: 18px;
+    font-weight: bold;
     margin-bottom: 20px;
     color: var(--main);
     text-decoration: none;
@@ -203,20 +225,26 @@ section.next-step .cards .card {
 
 /* RESPONSE CONTENT */
 
-.content-response {
+.content-response,
+.content-miss,
+.content-support {
     display: grid;
     grid-template-columns: 1fr 1fr;
     align-items: center;
     
-    padding: 120px 0 80px;
+    padding: 80px 0;
 }
 
-.response-content h2 {
+.response-content h2,
+.miss-content h2,
+.support-content h2 {
     font-size: 48px;
     color: var(--title);
 }
 
-.response-content p.p-response {
+.response-content p.p-response,
+.miss-content p.p-miss,
+.support-content p.p-support {
     margin: 40px 0;
     font-size: 20px;
     color: var(--content-description);
@@ -228,4 +256,215 @@ section.next-step .cards .card {
     font-weight: bold;
 }
 
+.miss-content ul {
+    list-style: none;
+}
 
+.miss-content ul li {
+    font-size: 20px;
+    color: var(--main);
+    margin-bottom: 8px;
+}
+
+.miss-content ul li i {
+    margin-right: 12px;
+}
+
+section.support {
+    background-color: var(--white);
+}
+
+.separator {
+    width: 100%;
+    height: 1px;
+    background-color: rgba(102,102,102,0.13);
+    margin-bottom: 40px;
+}
+
+.schedule {
+    color: var(--content-description);
+    font-size: 17px;
+    margin-bottom: 40px;
+}
+
+.support-content a.support-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    text-decoration: none;
+    background-color: #f46f7c;
+    color: #ffffff;
+    
+    font-size: 16px;
+    font-weight: bold;
+
+    width: 137px;
+    height: 40px;
+
+    border-radius: 4px;
+
+    -webkit-box-shadow: 0px 24px 48px -12px rgba(244,111,124,1);
+-moz-box-shadow: 0px 24px 48px -12px rgba(244,111,124,1);
+box-shadow: 0px 24px 48px -12px rgba(244,111,124,1);
+
+}
+
+/* PLAN AREA */
+
+section.plans {
+    background-color: #30393b;
+    padding: 80px 0;
+}
+
+section.plans h2 {
+    font-size: 48px;
+    color: var(--white);
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+section.plans .plans-description {
+    font-size: 21px;
+    color: var(--content-description);
+    line-height: 2em;
+    text-align: center;
+    margin-bottom: 40px;
+}
+/* 
+.toggle-pricing {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.toggle-pricing input[type="checkbox"] {
+    position: absolute;
+    width: 40px;
+    height: 25px;
+    -webkit-appearance: none;
+    background: #c6c6c6;
+    outline: none;
+    border-radius: 20px;
+    box-shadow: inset 0 0 5px rgba(102,102,102,0.13);
+    transition: .4s;
+}
+
+.toggle-pricing input:checked[type="checkbox"] {
+    background-color: var(--main);
+}
+
+.toggle-pricing input[type="checkbox"]:before {
+    content: '';
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    border-radius: 20px;
+    top: 20%;
+    left: 25%;
+    background: var(--white);
+    transform: scale(1.1);
+    box-shadow: 0 2px 5px rgba(102,102,102,0.13);
+    transition: .4s;
+}
+
+.toggle-pricing input:checked[type="checkbox"]:before {
+    left: 25px;
+} */
+
+/* CARDS PLANS */
+
+.cards-plans {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+}
+
+.card-plan {
+    background-color: var(--white);
+    padding: 30px 45px;
+    border-radius: 4px;
+}
+
+.card-plan h3 {
+    text-transform: uppercase;
+    color: var(--content-description);
+    font-size: 13px;
+    margin-bottom: 20px;
+}
+
+.card-plan .card-plan-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.card-plan .card-plan-header .popular{
+    font-size: 12px;
+    color: var(--white);
+    background-color: #f46f7c;
+    width: 83px;
+    height: 18px;
+    align-items: center;
+}
+
+.card-plan .plan-price {
+    font-size: 20px;
+    color: var(--title);
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+
+.card-plan .plan-price span {
+    font-size: 40px;
+}
+
+.card-plan .plan-description {
+    font-size: 14px;
+    color: var(--content-description);
+    margin-bottom: 30px;
+}
+
+.card-plan ul {
+    list-style: none;
+    margin-bottom: 20px;
+}
+
+.card-plan ul li {
+    margin-bottom: 15px;
+    font-size: 17px;
+}
+
+.card-plan ul li i {
+    margin-right: 10px;
+}
+
+.card-plan ul li.unavailable {
+    color: #8e8e8e;
+    text-decoration: line-through;
+}
+
+.card-plan a.plan-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: #1290a4;
+    color: var(--white);
+
+    font-weight: bold;
+    font-size: 18px;
+    text-decoration: none;
+
+    border-radius: 4px;
+
+    width: auto;
+    height: 50px;
+    padding: 0 10px;
+    margin-bottom: 20px;
+}
+
+.card-plan .no-card {
+    font-size: 14px;
+    color: var(--content-description);
+}
