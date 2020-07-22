@@ -1,0 +1,104 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap');
+@media (max-width: 900px) {
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        font-family: 'Karla', sans-serif;
+        background-color: #f8f8f8;
+    }
+
+    img {
+        max-width: 100%;
+    }
+    
+    h2 {
+        font-size: 30px;
+    }
+
+
+    .mobile-none {
+        display: none;
+    }
+    .hero {
+        display: flex;
+        flex-direction: column-reverse;
+        padding-top: 100px;
+    }
+
+    section.next-step .cards {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+
+    .content-response,
+    .content-support {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+
+
+    .content-miss {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
+    .response-content h2,
+    .miss-content h2,
+    .support-content h2,
+    .newsletter h2,
+    section.plans h2 {
+        font-size: 30px;
+        margin-top: 40px;
+    }
+
+    .response-content p.p-response,
+    .miss-content p.p-miss,
+    .support-content p.p-support,
+    .newsletter-content p.p-newsletter,
+    section.plans .plans-description {
+        margin: 40px 0;
+        font-size: 16px;
+        color: var(--content-description);
+    }
+
+    .miss-content ul li {
+        font-size: 14px;
+    }
+
+    .cards-plans {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 20px;
+        margin-bottom: 40px;
+    }
+
+    .min-container {
+        width: 100%;
+        max-width: 100%;
+        padding: 0;
+        justify-content: center;
+    }
+
+    .newsletter-content .email {
+        justify-content: center;
+        grid-template-columns: 1fr;
+    }
+
+    .email button {
+        height: 60px;
+    }
+
+    .footer-content {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 50px;
+    }
+
+    .ft2 {
+        display: block;
+    }
+}
