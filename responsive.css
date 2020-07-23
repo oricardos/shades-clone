@@ -23,10 +23,28 @@
     .mobile-none {
         display: none;
     }
+
+    main {
+        margin-top: 80px;
+        padding-bottom: 120px;
+    }
+
+    .main-content h1 {
+        font-size: 42px;
+        margin-top: 20px;
+    }
+
+    .main-content .email {
+        grid-template-columns: 1fr;
+    }
+
     .hero {
-        display: flex;
         flex-direction: column-reverse;
         padding-top: 100px;
+    }
+
+    section.next-step {
+        margin-top: 180px;
     }
 
     section.next-step .cards {
